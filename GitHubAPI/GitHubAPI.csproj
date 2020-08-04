@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>No Name Pro</Authors>
+    <Description>.NET Library for GitHub API Management</Description>
+    <Copyright>Copyright by No Name Pro</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/NoNamePro0/GitHubAPI</RepositoryUrl>
+    <PackageTags>github</PackageTags>
+    <PackageProjectUrl>https://github.com/NoNamePro0/GitHubAPI</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
