@@ -12,6 +12,8 @@ namespace GitHubAPI.Tests
         [Test]
         public void Test1()
         {
+            GitHubAPI.Model.Repo[] repos = GitHubAPI.Get.Repos(GitHubAPI.Get.User("NoNamePro0"));
+
             Assert.Pass();
         }
     }
