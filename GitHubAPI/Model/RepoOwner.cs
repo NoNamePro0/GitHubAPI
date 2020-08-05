@@ -1,4 +1,6 @@
-﻿namespace GitHubAPI.Model
+﻿using Newtonsoft.Json;
+
+namespace GitHubAPI.Model
 {
     /// <summary>
     /// Owner of a Repository. User or a Organisation
@@ -8,41 +10,49 @@
         /// <summary>
         /// Username of Repository Owner
         /// </summary>
+        [JsonProperty("login")]
         public string login { get; set; }
 
         /// <summary>
         /// User-ID from Repository Owner
         /// </summary>
-        public int id { get; set; }
+        [JsonProperty("id")]
+        public int Id { get; set; }
 
         /// <summary>
         /// Node-ID of Repository Owner
         /// </summary>
-        public string node_id { get; set; }
+        [JsonProperty("node_id")]
+        public string NodeID { get; set; }
 
         /// <summary>
         /// The URL to the Avatar
         /// </summary>
-        public string avatar_url { get; set; }
+        [JsonProperty("avatar_url")]
+        public string AvatarURL { get; set; }
 
         /// <summary>
         /// User-ID from Gravatar
         /// </summary>
-        public string gravatar_id { get; set; }
+        [JsonProperty("gravatar_id")]
+        public string GravtarID { get; set; }
 
         /// <summary>
         /// HTML-Page-Url from User
         /// </summary>
-        public string html_url { get; set; }
+        [JsonProperty("html_url")]
+        public string HtmlURL { get; set; }
 
         /// <summary>
         /// If it's a 'User' or 'Organisation'
         /// </summary>
-        public string type { get; set; }
+        [JsonProperty("type")]
+        public string Type { get; set; }
 
         /// <summary>
         /// If the User is a GitHub Site Admin
         /// </summary>
-        public bool site_admin { get; set; }
+        [JsonProperty("site_admin")]
+        public bool SiteAdmin { get; set; }
     }
 }

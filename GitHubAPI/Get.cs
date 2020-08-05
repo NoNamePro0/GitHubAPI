@@ -32,7 +32,7 @@ namespace GitHubAPI
         /// <param name="user">Repositories by this User</param>
         /// <param name="access">Filled Access-Class for User Agent and Auth. Optional.</param>
         /// <returns>A Repo-Array with the repositories</returns>
-        public static Repo[] Repos(User user, Access access = null) { return Repos(user.login, access); }
+        public static Repo[] Repos(User user, Access access = null) { return Repos(user.Login, access); }
 
         /// <summary>
         /// Give a Repo-Array from Users repos

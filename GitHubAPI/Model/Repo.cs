@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace GitHubAPI.Model
 {
@@ -10,171 +11,193 @@ namespace GitHubAPI.Model
         /// <summary>
         /// ID of Repository
         /// </summary>
-        public int id { get; set; }
+        [JsonProperty("id")]
+        public int Id { get; set; }
 
         /// <summary>
         /// Node-ID of Repo
         /// </summary>
-        public string node_id { get; set; }
+        [JsonProperty("node_id")]
+        public string NodeID { get; set; }
 
         /// <summary>
         /// Name of the Repository
         /// </summary>
-        public string name { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
         /// <summary>
         /// Owner and Name with `/` seperated
         /// </summary>
-        public string full_name { get; set; }
+        [JsonProperty("full_name")]
+        public string FullName { get; set; }
 
         /// <summary>
         /// Owner of Repository
         /// </summary>
-        public RepoOwner owner { get; set; }
+        [JsonProperty("owner")]
+        public RepoOwner Owner { get; set; }
 
         /// <summary>
         /// HTML-Page-URL for Users
         /// </summary>
-        public string html_url { get; set; }
+        [JsonProperty("html_url")]
+        public string HtmlURL { get; set; }
 
         /// <summary>
         /// Description of Repo
         /// </summary>
-        public string description { get; set; }
+        [JsonProperty("description")]
+        public string Description { get; set; }
 
         /// <summary>
         /// Boolean if the Repo is a fork of another repo
         /// </summary>
-        public bool fork { get; set; }
+        [JsonProperty("fork")]
+        public bool IsFork { get; set; }
 
         /// <summary>
         /// Date and Time for Creation of Repo
         /// </summary>
-        public DateTime created_at { get; set; }
+        [JsonProperty("created_at")]
+        public DateTime CreatedAt { get; set; }
 
         /// <summary>
         /// Date and Time of Updating Information of Repo like Description or Name
         /// </summary>
-        public DateTime updated_at { get; set; }
+        [JsonProperty("updated_at")]
+        public DateTime UpdatedAt { get; set; }
 
         /// <summary>
         /// Date and Time from the last push
         /// </summary>
-        public DateTime pushed_at { get; set; }
+        [JsonProperty("pushed_at")]
+        public DateTime PushedAt { get; set; }
 
         /// <summary>
         /// Clone-URL for opening in git-Client: git://
         /// </summary>
-        public string git_url { get; set; }
+        [JsonProperty("git_url")]
+        public string GitURL { get; set; }
 
         /// <summary>
         /// Clone-URL for Cloning with SSH
         /// </summary>
-        public string ssh_url { get; set; }
+        [JsonProperty("ssh_url")]
+        public string sshURL { get; set; }
 
         /// <summary>
         /// Clone-URL for Cloning with HTTP
         /// </summary>
-        public string clone_url { get; set; }
+        [JsonProperty("clone_url")]
+        public string CloneURL { get; set; }
 
         /// <summary>
         /// Page from Repository
         /// </summary>
-        public string svn_url { get; set; }
+        [JsonProperty("svn_url")]
+        public string svnURL { get; set; }
 
         /// <summary>
         /// Homepage from Repository, given from User
         /// </summary>
-        public string homepage { get; set; }
+        [JsonProperty("homepage")]
+        public string Homepage { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        public int size { get; set; }
+        [JsonProperty("size")]
+        public int Size { get; set; }
 
         /// <summary>
         /// Amount of User who starred repo
         /// </summary>
-        public int stargazers_count { get; set; }
+        [JsonProperty("stargazers_count")]
+        public int CountStargazers { get; set; }
 
         /// <summary>
         /// Amount of User who watching repo
         /// </summary>
-        public int watchers_count { get; set; }
+        [JsonProperty("watchers_count")]
+        public int CountWatchers { get; set; }
 
         /// <summary>
         /// Main-Langugage of Repository-Code
         /// </summary>
-        public string language { get; set; }
+        [JsonProperty("language")]
+        public string Language { get; set; }
 
         /// <summary>
         /// If Issues are allowed and enabled
         /// </summary>
-        public bool has_issues { get; set; }
+        [JsonProperty("has_issues")]
+        public bool HasIssues { get; set; }
 
         /// <summary>
         /// If Projects are enabled
         /// </summary>
-        public bool has_projects { get; set; }
+        [JsonProperty("has_projects")]
+        public bool HasProjects { get; set; }
 
         /// <summary>
         /// If Downloads/Releases will show on HTML-Git-Page
         /// </summary>
-        public bool has_downloads { get; set; }
+        [JsonProperty("has_downloads")]
+        public bool HasDownloads { get; set; }
 
         /// <summary>
         /// If Wiki are enabled
         /// </summary>
-        public bool has_wiki { get; set; }
+        [JsonProperty("has_wiki")]
+        public bool HasWiki { get; set; }
 
         /// <summary>
         /// If Repo is on GitHub Pages hosted
         /// </summary>
-        public bool has_pages { get; set; }
+        [JsonProperty("has_pages")]
+        public bool HasPages { get; set; }
 
         /// <summary>
         /// Amount of Forks
         /// </summary>
-        public int forks_count { get; set; }
+        [JsonProperty("forks_count")]
+        public int CountForks { get; set; }
 
         /// <summary>
         /// If Repo is archived and read-only
         /// </summary>
-        public bool archived { get; set; }
+        [JsonProperty("archived")]
+        public bool Archived { get; set; }
 
         /// <summary>
         /// If Repo is disabled
         /// </summary>
-        public bool disabled { get; set; }
+        [JsonProperty("disabled")]
+        public bool Disabled { get; set; }
 
         /// <summary>
         /// Amount of Open Issues
         /// </summary>
-        public int open_issues_count { get; set; }
+        [JsonProperty("open_issues_count")]
+        public int CountOpenIssues { get; set; }
 
         /// <summary>
         /// The License from Repo.
         /// </summary>
-        public ShortLicense license { get; set; }
-
-        /// <summary>
-        /// Amount of Forks
-        /// </summary>
-        public int forks { get; set; }
+        [JsonProperty("license")]
+        public ShortLicense License { get; set; }
 
         /// <summary>
         /// Amount of Open Issues
         /// </summary>
-        public int open_issues { get; set; }
-
-        /// <summary>
-        /// Amount of User who watching repo
-        /// </summary>
-        public int watchers { get; set; }
+        [JsonProperty("open_issues")]
+        public int OpenIssues { get; set; }
 
         /// <summary>
         /// Branch-Name for the default branch. Shown as default on HTML-Git-Page
         /// </summary>
-        public string default_branch { get; set; }
+        [JsonProperty("default_branch")]
+        public string DefaultBranch { get; set; }
     }
 }

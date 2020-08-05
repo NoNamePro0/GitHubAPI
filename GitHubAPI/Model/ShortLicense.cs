@@ -1,4 +1,6 @@
-﻿namespace GitHubAPI.Model
+﻿using Newtonsoft.Json;
+
+namespace GitHubAPI.Model
 {
     /// <summary>
     /// License for a Repository
@@ -8,21 +10,25 @@
         /// <summary>
         /// A short id tolower of License
         /// </summary>
-        public string key { get; set; }
+        [JsonProperty("key")]
+        public string Key { get; set; }
 
         /// <summary>
         /// Full Name of Lisence
         /// </summary>
-        public string name { get; set; }
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
         /// <summary>
         /// A ID for the License
         /// </summary>
-        public string spdx_id { get; set; }
+        [JsonProperty("spdx_id")]
+        public string SpdxID { get; set; }
 
         /// <summary>
         /// Node-ID of Liscence
         /// </summary>
-        public string node_id { get; set; }
+        [JsonProperty("node_id")]
+        public string NodeID { get; set; }
     }
 }
