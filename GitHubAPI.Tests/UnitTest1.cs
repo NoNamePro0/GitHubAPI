@@ -12,7 +12,8 @@ namespace GitHubAPI.Tests
         [Test]
         public void Test1()
         {
-            GitHubAPI.Model.Repo[] repos = GitHubAPI.Get.Repos(GitHubAPI.Get.User("NoNamePro0"));
+
+            GitHubAPI.Model.Branch[] branches = GitHubAPI.Get.Branches(GitHubAPI.Get.Repos(GitHubAPI.Get.User("NoNamePro0"))[0]);
 
             Assert.Pass();
         }
