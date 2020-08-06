@@ -186,7 +186,7 @@ namespace GitHubAPI.Model
         /// The License from Repo.
         /// </summary>
         [JsonProperty("license")]
-        public ShortLicense License { get; set; }
+        public RepoLicense License { get; set; }
 
         /// <summary>
         /// Amount of Open Issues
